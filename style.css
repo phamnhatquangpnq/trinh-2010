@@ -8,8 +8,14 @@
   --ease: cubic-bezier(.2, .8, .2, 1);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
-body { font-family: 'Quicksand', sans-serif; color: #fff; background: #120a24; overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Quicksand', sans-serif; color: #fff; overflow-x: hidden;
+  background: linear-gradient(180deg,
+    #120a24 0%, #2d1650 9%, #5a1838 17%, #8c2346 24%, #c94f6d 28.5%,
+    #ffe4ec 33%, #fff3d6 38%, #e8f2ff 43%, #ffdbe6 50%, #ffb3c8 57%,
+    #b56b9c 64%, #5b3080 70%, #2a1450 76%, #120a24 84%, #0b0618 100%);
+}
 h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .script { font-family: 'Dancing Script', cursive; }
 
@@ -18,7 +24,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--gold), var(--rose)); }
 
 .scene {
-  min-height: 100vh; scroll-snap-align: start; position: relative; overflow: hidden;
+  min-height: 100vh; position: relative; overflow: hidden;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 80px 24px; gap: 20px;
 }
@@ -26,13 +32,9 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .scene p { font-size: clamp(1rem, 2.3vw, 1.2rem); line-height: 1.8; max-width: 640px; }
 
 /* Backgrounds */
-.s-night { background: radial-gradient(ellipse at bottom, #3b1d5e 0%, #120a24 70%); }
-.s-rose { background: linear-gradient(160deg, #4a0f25, #8c2346 55%, #c94f6d); }
-.s-pastel { background: linear-gradient(135deg, #ffe4ec, #fff3d6 50%, #e3f4ff); color: var(--ink); }
-.s-heart { background: linear-gradient(180deg, #ffdbe6, #ffb3c8); color: var(--ink); }
-.s-dusk { background: linear-gradient(180deg, #ffb3c8, #b56b9c 40%, #3b1d5e); }
-.s-galaxy { background: radial-gradient(ellipse at top, #2a1450, #0b0618 75%); }
-.s-finale { background: radial-gradient(circle at center, #3a1030, #0b0618 80%); }
+/* Nền liền mạch trên body; sao mờ dần ở mép để không tạo vệt ngang */
+.s-pastel, .s-heart { color: var(--ink); }
+.stars { -webkit-mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent); mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent); }
 
 /* Stars */
 .stars { position: absolute; inset: 0; pointer-events: none; }
