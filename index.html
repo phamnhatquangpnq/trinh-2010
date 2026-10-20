@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Standardized to production level -->
+<!-- Purpose: Trang chúc mừng 20/10 dành tặng Từ My Trinh -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc mừng 20/10 – Gửi Từ My Trinh 💐</title>
+  <meta name="description" content="Món quà nhỏ nhân ngày Phụ nữ Việt Nam 20/10 dành tặng Từ My Trinh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <main>
+    <!-- 1. Đêm sao – tên hiện từng chữ -->
+    <section class="scene s-night" id="s1">
+      <div class="stars" aria-hidden="true"></div>
+      <p class="eyebrow reveal fade">20 · 10 · 2026</p>
+      <h1 class="name" id="typeName" data-text="Từ My Trinh"></h1>
+      <p class="sub reveal fade delay-2">Ngày của Trinh – ngày của những điều dịu dàng nhất ✨</p>
+      <div class="scroll-hint">Kéo xuống nhé <span>↓</span></div>
+    </section>
+
+    <!-- 2. Hoa hồng – ảnh polaroid xoay vào -->
+    <section class="scene s-rose" id="s2">
+      <div class="split">
+        <figure class="polaroid reveal spin-in">
+          <img src="507795e3-c5d3-48e9-ac83-ac77dad5c561.jpg" alt="Ảnh của Trinh" loading="lazy" />
+          <figcaption>Cô gái của ngày hôm nay 🌹</figcaption>
+        </figure>
+        <div class="text">
+          <h2 class="reveal blur-in">Gửi Trinh,</h2>
+          <p class="reveal blur-in delay-1">Mình chúc Trinh một ngày 20/10 thật rạng rỡ — cười nhiều hơn mọi ngày, được yêu thương nhiều hơn mọi ngày.</p>
+          <p class="reveal blur-in delay-2">Vì Trinh xứng đáng với tất cả những điều đẹp đẽ nhất.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Pastel – hoa nở -->
+    <section class="scene s-pastel" id="s3">
+      <div class="garden" aria-hidden="true">
+        <span class="flower f1">🌸</span><span class="flower f2">🌷</span><span class="flower f3">🌼</span>
+        <span class="flower f4">💐</span><span class="flower f5">🌺</span><span class="flower f6">🌻</span>
+      </div>
+      <h2 class="reveal zoom-in">Như một đóa hoa</h2>
+      <p class="quote reveal zoom-in delay-1">“Mong Trinh luôn tươi tắn như hoa mùa xuân,<br />nhẹ nhàng như nắng sớm, và vững vàng như chính Trinh vẫn luôn là.”</p>
+    </section>
+
+    <!-- 4. Trái tim bay – ảnh trượt ngang -->
+    <section class="scene s-heart" id="s4">
+      <div class="hearts" id="hearts" aria-hidden="true"></div>
+      <div class="split reverse">
+        <figure class="frame reveal slide-right">
+          <img src="61a93ede-678d-4494-95a3-bfb75b2d1ea6.webp" alt="Khoảnh khắc của Trinh" loading="lazy" />
+        </figure>
+        <div class="text">
+          <h2 class="reveal slide-left">Sức khỏe & bình an</h2>
+          <p class="reveal slide-left delay-1">Mình chúc Trinh luôn khỏe mạnh, ngủ ngon, ăn ngon, và mỗi sáng thức dậy đều thấy lòng nhẹ tênh.</p>
+          <p class="reveal slide-left delay-2">Mệt thì nghỉ, buồn thì kể — vì luôn có người sẵn sàng lắng nghe Trinh. 💗</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Video – vòng tròn mở ra -->
+    <section class="scene s-dusk" id="s5">
+      <h2 class="reveal fade">Một chút kỷ niệm</h2>
+      <div class="video-wrap reveal circle-in">
+        <video src="b9b54441-8d7a-403c-aaaa-8af841ab93eb.mp4" muted loop playsinline controls preload="metadata"></video>
+      </div>
+      <p class="reveal fade delay-2">Những khoảnh khắc nhỏ, nhưng mình muốn Trinh giữ mãi.</p>
+    </section>
+
+    <!-- 6. Thẻ điều ước xếp lần lượt -->
+    <section class="scene s-galaxy" id="s6">
+      <div class="stars" aria-hidden="true"></div>
+      <h2 class="reveal fade">Những điều mình mong cho Trinh</h2>
+      <div class="cards">
+        <article class="card reveal flip-in"><span>🎯</span><h3>Thành công</h3><p>Mọi dự định đều suôn sẻ, cố gắng nào cũng được đền đáp.</p></article>
+        <article class="card reveal flip-in delay-1"><span>😊</span><h3>Vui vẻ</h3><p>Ngày nào cũng có ít nhất một lý do để cười thật tươi.</p></article>
+        <article class="card reveal flip-in delay-2"><span>💖</span><h3>Yêu thương</h3><p>Luôn được trân trọng và bao bọc bởi những người thương Trinh.</p></article>
+        <article class="card reveal flip-in delay-3"><span>🌈</span><h3>Tự do</h3><p>Luôn là chính mình — xinh đẹp, tự tin và tỏa sáng.</p></article>
+      </div>
+    </section>
+
+    <!-- 7. Hộp quà + pháo hoa -->
+    <section class="scene s-finale" id="s7">
+      <canvas id="fireworks" aria-hidden="true"></canvas>
+      <h2 class="reveal fade">Và cuối cùng…</h2>
+      <button class="gift reveal zoom-in delay-1" id="giftBtn" aria-label="Mở quà">
+        <span class="lid">🎀</span><span class="box">🎁</span>
+      </button>
+      <p class="hint reveal fade delay-2" id="giftHint">Bấm vào hộp quà nhé!</p>
+      <div class="final-msg" id="finalMsg">
+        <h2 class="script">Chúc mừng 20/10, Trinh!</h2>
+        <p>Cảm ơn Trinh vì đã luôn là một người thật tuyệt vời.<br />Mong rằng hôm nay và mãi về sau, Trinh luôn hạnh phúc. 💐</p>
+        <p class="sign">— Mình</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
